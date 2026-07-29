@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
-<title>喵霸天 · 工作台</title>
-<meta name="theme-color" content="#4f6ef7">
+<title>海绵的工作台</title>
+<meta name="theme-color" content="#3370ff">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="喵霸天">
+<meta name="apple-mobile-web-app-title" content="海绵">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-180.png">
 <style>
 :root{
-  --brand:#4f6ef7; --brand2:#7c5cf0; --bg:#f5f6fa; --card:#ffffff;
-  --text:#1f2430; --sub:#8a90a0; --line:#eceef3; --danger:#e5484d; --ok:#22a06b;
+  --brand:#3370ff; --brand2:#1456f0; --bg:#f5f6fa; --card:#ffffff;
+  --text:#1f2329; --sub:#646a73; --line:#e5e6eb; --danger:#f53f3f; --ok:#00b42a;
   --radius:14px; --safe-b:env(safe-area-inset-bottom,0px); --safe-t:env(safe-area-inset-top,0px); --safe-l:env(safe-area-inset-left,0px); --nav-w:76px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -66,7 +66,7 @@ main{flex:1;overflow-y:auto;padding:4px 16px 24px calc(16px + var(--nav-w) + var
 .card{background:var(--card);border-radius:var(--radius);padding:14px;margin-bottom:10px;border:1px solid var(--line);position:relative}
 .card.multi .copy-check{position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;border:2px solid #c9cdd8;background:var(--card);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;z-index:2;transition:all .15s}
 .card.multi .copy-check.on{background:var(--brand);border-color:var(--brand)}
-.card.multi.sel{border-color:var(--brand);background:rgba(79,110,247,.04)}
+.card.multi.sel{border-color:var(--brand);background:rgba(51,112,255,.04)}
 .copy-title{font-weight:600;font-size:15px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-right:30px}
 .copy-body{font-size:13px;color:#555c6e;line-height:1.6;white-space:pre-wrap;word-break:break-word}
 .copy-body.open{max-height:none}
@@ -78,7 +78,7 @@ main{flex:1;overflow-y:auto;padding:4px 16px 24px calc(16px + var(--nav-w) + var
 #copyMultiBtn.on{background:var(--brand);color:#fff;border-color:var(--brand)}
 .copy-bar,.copy-all,.copy-back{display:none}  /* 已废弃样式，留空防误用 */
 .f-hint{font-size:12px;color:var(--sub);margin:2px 0 4px;padding:9px 11px;background:var(--bg);border-radius:8px;line-height:1.4}
-.f-hint.has{color:var(--brand);background:rgba(79,110,247,.08);font-weight:600}
+.f-hint.has{color:var(--brand);background:rgba(51,112,255,.08);font-weight:600}
 .tag{font-size:11px;color:var(--brand);background:#eef1fe;padding:2px 8px;border-radius:6px}
 .row-actions{display:flex;gap:14px;margin-top:10px;font-size:13px}
 .row-actions span{color:var(--brand);cursor:pointer}
@@ -113,7 +113,7 @@ nav svg{width:21px;height:21px}
 nav{overflow-y:auto;scrollbar-width:none}
 nav::-webkit-scrollbar{display:none}
 /* 悬浮按钮 */
-.fab{position:fixed;right:18px;bottom:calc(18px + var(--safe-b));width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-size:28px;border:0;box-shadow:0 6px 18px rgba(79,110,247,.4);z-index:25;display:flex;align-items:center;justify-content:center}
+.fab{position:fixed;right:18px;bottom:calc(18px + var(--safe-b));width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-size:28px;border:0;box-shadow:0 6px 18px rgba(51,112,255,.4);z-index:25;display:flex;align-items:center;justify-content:center}
 /* 弹层 */
 .mask{position:fixed;left:var(--nav-w);top:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:40;display:none}
 .mask.show{display:block}
@@ -413,7 +413,7 @@ progress{width:100%;height:6px}
           </div>
           <div class="desc" id="ghStatus" style="margin-top:8px">未配置</div>
           <button class="btn" id="ghSync" style="margin-top:10px;background:linear-gradient(135deg,#f5804e,#f0a24f)">从云端拉取素材</button>
-          <button class="btn" id="ghSyncCopy" style="margin-top:10px;background:linear-gradient(135deg,#4f6ef7,#6a8bff)">☁ 文案云同步</button>
+          <button class="btn" id="ghSyncCopy" style="margin-top:10px;background:linear-gradient(135deg,#3370ff,#1456f0)">☁ 文案云同步</button>
         </div>
       </div>
     </div>
@@ -472,7 +472,7 @@ progress{width:100%;height:6px}
   </div>
   <div class="f-label">分类（选填，如：夏季新品 / 主图 / 详情页）</div>
   <input class="f-input" id="aCat" placeholder="选填，方便按产品/系列筛选" list="catList"><datalist id="catList"></datalist>
-  <div class="f-label">账号（用于「账号-面料」标签，如：喵霸天 / 抖音号，留空则标签只用面料）</div>
+  <div class="f-label">账号（用于「账号-面料」标签，如：大麦 / 抖音号，留空则标签只用面料）</div>
   <input class="f-input" id="aAccount" placeholder="选填">
   <div class="f-label">面料（点选，自动拼成「账号-面料」标签）</div>
   <div class="chips" id="assetFabricChips" style="margin-top:2px"></div>
@@ -577,5 +577,6 @@ progress{width:100%;height:6px}
 <div class="toast" id="toast"></div>
 
 <script src="app.js?v=39"></script>
+<script src="reports.js?v=1"></script>
 </body>
 </html>
