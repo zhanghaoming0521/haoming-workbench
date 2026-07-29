@@ -1208,7 +1208,7 @@ async function exportBackup(full){
     const blob=new Blob([JSON.stringify(data)],{type:'application/json'});
     const aEl=document.createElement('a');
     aEl.href=URL.createObjectURL(blob);
-    aEl.download='喵霸天备份_'+(full?'完整':'轻量')+'_'+todayStr()+'.json';
+    aEl.download='海绵备份_'+(full?'完整':'轻量')+'_'+todayStr()+'.json';
     aEl.click();
     setTimeout(()=>URL.revokeObjectURL(aEl.href),10000);
     toast('备份文件已生成（'+fmtSize(blob.size)+'），请妥善保存');
